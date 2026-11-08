@@ -28,7 +28,7 @@ gate_Z = np.array([
 gate_H = (1 / np.sqrt(2)) * np.array([
     [1, 1],
     [1, -1]
-])
+], dtype=complex)
 
 #bramka theta (zalezna od tej thety)
 gate_Ry = lambda theta: np.array([
@@ -67,7 +67,7 @@ def main():
 
     state_h = gate_H @ gate_H @ ket_0
 
-    print(f"Stan wektorowy: {state_h}")
+    print(f"Stan wektorowy: {np.round(state_h, 5)}")
     print(f"Pomiar: {measure(state_h)}")
     print()
     print()
@@ -83,7 +83,7 @@ def main():
     state_after = gate_H_na_pierwszy @ state_00
     bell_state = gate_CNOT @ state_after
 
-    print(f"Stan wektorowy: {bell_state}")
+    print(f"Stan wektorowy: {np.round(bell_state, 5)}")
     print(f"Pomiar: {measure(bell_state)}")
     print()
     print()
