@@ -1,0 +1,10 @@
+# ZADANIE 3 #
+
+Cezary Kalarus
+
+# MOJA HIPOTEZA #
+
+Dla zbiorów nieliniowych, tj. make_moons, użycie obserwabli $Z_0Z_1$, pozwoli obwodowi o małej ilości warstw (np. L = 1) osiągnąć wyższe accuracy i szybszą zbieżność funkcji loss. Dodatkowo, przy użyciu $Z_0Z_1$ zamiast $Z_0$, usunięcie bramki CNOT z ansatzu, postutkuje znaczmnie mniejszym spadkiem Accuracy, niż przy standardowej $Z_0$.
+
+### Wytłumaczenie ###
+W takim zbiorze make_moons mamy dwie cechy. Sam zbiór jest oczywiście nieliniowy, czyli nie ma takiej funkcji liniowej, która by bezbłędnie oddzieliła jeden wynik od drugiego. Aby dobrze móc klasyfikować, model musi znaleźć odpowiednią zależność między dwoma cechami. Skoro mamy akurat dwie cechy to najlepiej jest użyć Angle Encoding - 1 cecha -> 1 kubit - więc wyjdą nam dwa kubity. Jeżeli nasz obwód będzie miał jedną warstwę to będziemy mieli w zasadzie tylko jedną turę rotacji i splątań - jeżeli w takiej sytuacji używalibyśmy obserwabli $Z_0$ - patrzylibyśmy tylko na jeden kubit i to na niego spadałby ten "obowiązek" mieszczenia nie tylko własnej cechy, ale też upchnięcia w sobie (poprzez cnot) informacji o drugiej - no a skoro mamy jedną warstwę, to tylko jedną bramkę splątania - nie będziemy w stanie wystarczająco dobrze tej informacji zakodować. Natomiast używając w tej sytuacji obserwabli globalnej dla tego układu - $Z_0Z_1$ patrzymy tak naprawdę na oba kubity naraz - nie ma konieczności upychania wiedzy z jednego w drugim, bo patrzymy na ich relację. W momencie, gdy nawet zabierzemy z ansatzu bramki splątań, to przez fakt że używamy obserwabli globalnej (nie sprawdzamy pojedyńczego kubitu, tylko relacje obu), mocno zmniejszy to pogorszenie się klasyfikacji modelu - ponieważ nadal będzie sprawdzał obie cechy. Samo $Z_0$, bez splątań sprawdzałoby tak naprawdę tylko jedną cechę, przez co model miałby bardzo niskie accuracy.
