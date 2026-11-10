@@ -43,5 +43,7 @@ Wg. hipotezy założyłem że przy 1 warstwie, 1 cnot nie przekaże informacji z
 ## Co by było gdyby ##
 Ze względu na moje zdziwienie 4. modelem próbowałem poeksperymentować - dodałem bias +0.25 (w pliku w komentarzach, w fun loss_and_grad i potem przy generowaniu wykresu). On jednak tylko w zasadzie przesuwa granicę "wyżej"/"niżej" na "mapie wysokościowej", przez co granica dostawała zakrzywienie i działała o wiele lepiej - ale to tylko pozór, przypadek akurat dla tego zbioru danych.
 
+Podobnie tez zrobiłem z range'm wag losowanych dla thety - na początku dla (-0.1, 0.1) - tak jak było na jednym snippecie na wykładzie - $R_y(\theta)$ po cnocie prawie nic nie obracały, pierwszy kubit w modelu 3 od razu się kasował. Wtedy zielona linia już w 0. epoce startowała z 82% accuracy oraz niskim loss (ok. 0.44) i utykała na takiej poziomej granicy przez resztę treningu.
+
 
 
