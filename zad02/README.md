@@ -10,7 +10,11 @@ Wydaję mi się, że wszystko zrozumiałem z tego co było na wykładzie. Natomi
 Jest to oczywiście:
 
 $$
-R_y(\theta) = \begin{bmatrix} cos(\frac\theta 2), & -sin(\frac\theta 2) \\ sin(\frac\theta 2), & cos(\frac\theta 2) \end{bmatrix}
+R_y(\theta) = 
+\begin{bmatrix} 
+\cos(\frac\theta 2) & -\sin(\frac\theta 2) \\ 
+\sin(\frac\theta 2) & \cos(\frac\theta 2) 
+\end{bmatrix}
 $$
 
 Może nasunąć się pytanie: skąd w ogóle tu te funkcje trygonometryczne? 
