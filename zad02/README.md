@@ -22,7 +22,9 @@ Tak samo będzie dla liczby zespolonej ($z = \alpha + i\beta $), gdzie $\alpha$ 
 A jak obrócić taką liczbę? Weźmy kąt $\phi$. Chcąc obrócić liczbę zespoloną o ten kąt (na wykresie zespolonym), mnoży się ją przez $e^{i\phi} = \cos\phi + i\sin\phi$. Mamy wtedy: 
 
 $$
-z_2 = (\alpha + i\beta) \cdot (\cos\phi + i\sin\phi) \\ z_2= \alpha\cos\phi + i\beta\cos\phi + i\alpha\sin\phi + \underbrace{i^2}_{-1} \cdot \beta\sin\phi \\ z_2 = \underbrace {\alpha\cos\phi - \beta\sin\phi}_{\text{cz. rzeczywista - nowe } \alpha_2} + i\underbrace{(\beta\cos\phi + \alpha\sin\phi)}_{\text{cz. urojona - nowe }\beta_2}
+z_2 = (\alpha + i\beta) \cdot (\cos\phi + i\sin\phi) \\
+z_2= \alpha\cos\phi + i\beta\cos\phi + i\alpha\sin\phi + \underbrace{i^2}_{-1} \cdot \beta\sin\phi \\
+z_2 = \underbrace {\alpha\cos\phi - \beta\sin\phi}_{\text{cz. rzeczywista - nowe } \alpha_2} + i\underbrace{(\beta\cos\phi + \alpha\sin\phi)}_{\text{cz. urojona - nowe }\beta_2}
 $$
 
 #### Jak to się ma do naszej bramki? ####
@@ -31,7 +33,19 @@ Spójrzmy teraz na macierz obrotu $R(\phi)$
 przemnożoną z wektorem kubitu:
 
 $$
-\begin{bmatrix}\cos\phi & -\sin\phi \\ \sin\phi & \cos\phi \end{bmatrix}\begin{bmatrix} \alpha \\ \beta \end{bmatrix} = \begin{bmatrix} \alpha\cos\phi - \beta\sin\phi \\ \alpha\sin\phi + \beta\cos\phi \end{bmatrix}
+\begin{bmatrix}
+\cos\phi & -\sin\phi \\ 
+\sin\phi & \cos\phi 
+\end{bmatrix}
+\begin{bmatrix} 
+\alpha \\ 
+\beta 
+\end{bmatrix}
+=
+\begin{bmatrix} 
+\alpha\cos\phi - \beta\sin\phi \\ 
+\alpha\sin\phi + \beta\cos\phi 
+\end{bmatrix}
 $$
 
 Górny wiersz stanu wynikowego to właśnie cz. rzeczywista $Re(z_2)$, a dolny wiersz to cz. urojona $Im(z_2)$.
