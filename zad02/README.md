@@ -48,7 +48,7 @@ Co oznacza, że w zasadzie mnożenie wektora przez tą macierz $R(\phi)$ robi do
 ### Teraz tylko pytanie, skąd w naszej macierzy $R_y(\theta)$ wszechobecny kąt $\frac\theta 2$ a nie poporstu $\theta$?
 Nasza macierz obrotu to dokładnie $R_y(\theta)$, tylko z podstawionym $\phi = \frac\theta 2$. Na sferze Blocha, kątem $\theta$ oznaczamy kąt jakim obracamy stan na kuli. <br>
 Na tej sferze też stany przeciwne: |0> - biegun północny i |1> - biegun południowy, leżą naprzeciwko siebie - w odległości 180 stopni $ = \theta$. <br>
-W naszym układzie (dwuwymiarowym) wektorów stan |0> $=\begin{bmatrix}1 \\ 0\end{bmatrix} $ leży na osi poziomej, a stan |1> = $=\begin{bmatrix}0 \\ 1\end{bmatrix} $ leży na osi pionowej. Dzieli je kąt prosty $\frac\pi 2$. <br>
+W naszym układzie (dwuwymiarowym) wektorów stan |0> $=\begin{bmatrix}1 \\\\ 0\end{bmatrix} $ leży na osi poziomej, a stan |1> = $=\begin{bmatrix}0 \\\\ 1\end{bmatrix} $ leży na osi pionowej. Dzieli je kąt prosty $\frac\pi 2$. <br>
 W takim razie, skoro przejście ze stanu |0> na |1> na Sferze Blocha 180 st. a na dwuwym. układzie połowę tego - 90 st. to kąt wektora $\phi$ musi być 2 razy mniejszy od kąta na sferze $\theta$: $\phi = \frac\theta 2$. <br>
 Dlatego właśnie w ciele wzoru na bramkę $R_y(\theta)$ występuje kąt $\frac\theta 2$ a cała bramka to poprostu obrót
 po okręgu jednostkowym o połowę kąta ze Sfery Blocha.
